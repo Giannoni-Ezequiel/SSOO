@@ -1,0 +1,9 @@
+While(true){
+    wait(pedidoDisponible); --2--1--0--3--2--1--0
+    tomarPedido();
+    signal(pedidoTomado); --1--2--3
+    wait(pedidoArmado); --3--2--1--0
+    entregarPedido();
+    signal(pedidoDisponible) --1--2--3
+}
+
